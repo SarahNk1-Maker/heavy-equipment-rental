@@ -50,16 +50,6 @@ const AboutUsAndServices = () => {
             in the industry, we pride ourselves on our commitment to excellence and our ability to meet
             the diverse needs of our customers.
           </Typography>
-          <Typography variant="body1" sx={{ marginBottom: '16px' }}>
-            At Alpha Industries, we believe in building strong relationships with our clients, based on
-            trust, transparency, and mutual respect. Our team of experts is here to assist you every step
-            of the way, ensuring that you have the right equipment for your project and that it performs
-            at its best.
-          </Typography>
-          <Typography variant="body1">
-            Thank you for considering Alpha Industries for your equipment rental needs. We look forward to
-            working with you and helping you achieve your project goals.
-          </Typography>
         </Container>
       </Box>
 
