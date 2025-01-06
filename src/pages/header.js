@@ -12,6 +12,7 @@ const Header = () => {
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           Alpha Industries
         </Typography>
+        <Link to="/"><Button sx={{ color: 'white' }}>Home</Button></Link>
         <Link to="/about-us"><Button sx={{ color: 'white' }}>About Us</Button></Link>
         <Link to="/equipment"><Button sx={{ color: 'white' }}>Equipment</Button></Link>
         <Link to="/contact"><Button sx={{ color: 'white' }}>Contact</Button></Link>
