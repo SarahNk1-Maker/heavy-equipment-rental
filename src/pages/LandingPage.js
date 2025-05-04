@@ -46,7 +46,7 @@ const LandingPage = () => {
               sx={{ color: '#3c3c3c', textAlign: 'left', fontWeight: 'normal', mt: 2 }}
             >
               Alpha Industries is a leading provider of high-performance industrial equipment and services. 
-              With over 50 years of experience in the industry, we are dedicated to delivering innovative solutions 
+              With over 15 years of experience in the industry, we are dedicated to delivering innovative solutions 
               and unmatched reliability to our clients across various sectors.
             
            
