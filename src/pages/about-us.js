@@ -4,23 +4,24 @@ import ConstructionIcon from '@mui/icons-material/Construction';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import BuildIcon from '@mui/icons-material/Build';
+import servicesImage from '../assets/services.jpg'; // Adjust the path to your image
 
-const primaryColor = '#eeab02';
+const primaryColor = '#b0bec5';
 
 // Services data
 const services = [
   {
-    title: 'Heavy Equipment Rental',
+    title: 'Site Preparation',
     description: 'Rent top-of-the-line heavy equipment for all your construction needs.',
     icon: <ConstructionIcon sx={{ fontSize: 50, color: '#3c3c3c' }} />,
   },
   {
-    title: 'On-Site Support',
+    title: 'Excavation Services',
     description: 'Get 24/7 on-site support from our experienced technicians.',
     icon: <SupportAgentIcon sx={{ fontSize: 50, color: '#3c3c3c' }} />,
   },
   {
-    title: 'Fleet Management',
+    title: 'Demolition Services',
     description: 'Comprehensive fleet management services to keep your projects running smoothly.',
     icon: <LocalShippingIcon sx={{ fontSize: 50, color: '#3c3c3c' }} />,
   },
@@ -33,34 +34,32 @@ const services = [
 
 const AboutUsAndServices = () => {
   return (
-    <div>
+    <Box
+       style={{ 
+        backgroundImage: `url(${servicesImage})`, 
+        backgroundSize: 'cover', 
+        backgroundPosition: 'center', 
+        minHeight: '80vh',
+        filter: 'blur(0.5px)' // Apply blur only to the background
+      }} >
       {/* About Us Section */}
-      <Box sx={{ marginTop: '140px',marginBottom:'40', backgroundColor: 'white' }}>
+      <Box sx={{ marginTop: '140px',marginBottom:'40' }}>
         <Container maxWidth="md">
-          <Typography variant="h3" sx={{ marginBottom: '24px', color: primaryColor }}>
-            About Us
-          </Typography>
-          <Typography variant="body1" sx={{ marginBottom: '16px' }}>
-            Welcome to Alpha Industries! We are a leading provider of heavy equipment rental services,
-            dedicated to delivering high-quality equipment and exceptional customer service.
-          </Typography>
-          <Typography variant="body1" sx={{ marginBottom: '16px' }}>
-            Our mission is to provide reliable, state-of-the-art equipment to help our clients achieve
-            their construction and industrial goals efficiently and effectively. With years of experience
-            in the industry, we pride ourselves on our commitment to excellence and our ability to meet
-            the diverse needs of our customers.
-          </Typography>
+       
         </Container>
       </Box>
 
       {/* Services Section */}
-      <Container sx={{ marginTop: '70px', marginBottom: '70px' }}>
+      <Container sx={{ marginTop: '70px', marginBottom: '70px', 
+          backgroundColor: 'rgba(255, 255, 255, 0.8)', 
+          p: 4 
+         }}>
         <Typography variant="h3" sx={{ color: '#3c3c3c', textAlign: 'center', fontWeight: 'bold', marginBottom: '40px' }}>
           Our Services
         </Typography>
-        <Grid container spacing={4}>
+        <Grid container spacing={5}>
           {services.map((service, index) => (
-            <Grid item xs={12} sm={6} md={3} key={index}>
+            <Grid item xs={12} sm={3} md={3} key={index}>
               <Paper
                 elevation={3}
                 sx={{
@@ -88,7 +87,7 @@ const AboutUsAndServices = () => {
           ))}
         </Grid>
       </Container>
-    </div>
+    </Box>
   );
 };
 

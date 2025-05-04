@@ -12,87 +12,65 @@ import {
 } from '@mui/material';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
-import excavatorImage from '../assets/herotwo.jpeg';
+import EquipmentWidget from '../../src/pages/equipmentwidget';
+import alphaImage from '../assets/services.jpg'; // Import your image here
 
 const LandingPage = () => {
   return (
     <div>
-      <Box
-        sx={{
-          display: 'flex',
-          height: '80vh',
-          alignItems: 'center',
-          justifyContent: 'center',
-          marginTop: '64px', // Adjust for AppBar height
-        }}
-      >
-        <Grid container spacing={0}>
-          {/* Orange background on the left */}
-          <Grid item xs={12} md={6} sx={{ backgroundColor: '#eeab02', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-          
-            <Typography variant="h2" sx={{ color: '#3c3c3c', textAlign: 'center' }}>
-              Heavy Duty. No Compromise.
+      {/* Widget Section */}
+      <Container sx={{ my: 10 }}>
+        <Typography
+       
+          variant="h4"
+          sx={{ color: '#3c3c3c', textAlign: 'center', fontWeight: 'bold', mb: 4 ,mt: 22}}
+        >
+        </Typography>
+        
+        <EquipmentWidget />
+      </Container>
+
+      {/* About Alpha Industries Section */}
+      <Container sx={{ marginTop: 10 }}>
+        <Grid container spacing={2} alignItems="center">
+          {/* Left side - Text */}
+          <Grid item xs={12} sm={6}>
+            <Typography
+              variant="h4"
+              sx={{ color: '#3c3c3c', textAlign: 'left', fontWeight: 'bold' }}
+            >
+              About Alpha Industries
             </Typography>
-            <Typography variant="h5" sx={{ color: '#3c3c3c', marginTop: '20px', textAlign: 'center' }}>
-              Unmatched Reliability for Every Project.
-            </Typography>
-            <List sx={{ marginTop: '24px' }}>
-              <ListItem>
-                <ListItemIcon>
-                  <CheckCircleOutlineIcon />
-                </ListItemIcon>
-                <ListItemText primary="Rent & Manage Equipment" />
-              </ListItem>
-              <ListItem>
-                <ListItemIcon>
-                  <CheckCircleOutlineIcon />
-                </ListItemIcon>
-                <ListItemText primary="View Accurate Rates" />
-              </ListItem>
-              <ListItem>
-                <ListItemIcon>
-                  <CheckCircleOutlineIcon />
-                </ListItemIcon>
-                <ListItemText primary="Full Satisfaction Guaranteed" />
-              </ListItem>
-            </List>
-            <Button variant="contained" sx={{ backgroundColor: '#3c3c3c', marginTop: '24px' }}>
-              LEARN MORE
-            </Button>
+            <Typography
+              variant="h6"
+              sx={{ color: '#3c3c3c', textAlign: 'left', fontWeight: 'normal', mt: 2 }}
+            >
+              Alpha Industries is a leading provider of high-performance industrial equipment and services. 
+              With over 50 years of experience in the industry, we are dedicated to delivering innovative solutions 
+              and unmatched reliability to our clients across various sectors.
+            
+           
+              Our team of experts ensures that every project is executed with precision and care, 
+              providing top-notch equipment rentals, sales, and services to meet the diverse needs of our customers.
+              </Typography>
           </Grid>
 
-          {/* Excavator image on the right */}
-          <Grid item xs={12} md={6}>
-            <img src={excavatorImage} alt="Excavator" style={{ width: '100%', animation: 'moveIn 2s ease-out' }} />
+          {/* Right side - Image */}
+          <Grid item xs={12} sm={6}>
+            <img
+              src={alphaImage}
+              alt="Alpha Industries"
+              style={{
+                width: '100%',
+                borderRadius: '8px',
+                boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.2)',
+              }}
+            />
           </Grid>
         </Grid>
-      </Box>
-
-      <Container sx={{ marginTop: 20 }}>
-        <Typography variant="h4" sx={{ color: '#eeab02', marginTop: '16px', textAlign: 'center', fontWeight: 'bold' }}>
-          Rent or Buy
-        </Typography>
-        <Typography variant="h4" sx={{ color: '#3c3c3c', marginTop: '16px', textAlign: 'center', fontWeight: 'bold' }}>
-          Flexible Options, Maximum Power
-        </Typography>
-        <p>
-          We are a leading provider of heavy equipment rental services. Our commitment to quality and customer satisfaction has made us the preferred choice for businesses of all sizes.
-        </p>
       </Container>
     </div>
   );
-};
-
-// Keyframe animation for moving the image in from the right
-const styles = {
-  '@keyframes moveIn': {
-    '0%': {
-      transform: 'translateX(100%)',
-    },
-    '100%': {
-      transform: 'translateX(0)',
-    },
-  },
 };
 
 export default LandingPage;

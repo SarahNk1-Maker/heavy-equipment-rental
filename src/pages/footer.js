@@ -6,7 +6,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import Logo from '../assets/logo.png'; // Adjust the path to where your logo is located
 
 const Footer = () => {
-  const primaryColor = '#eeab02';
+  const primaryColor = '#b0bec5';
   const secondaryColor = '#3c3c3c';
   const whiteText = '#fff'; // Consistent white color variable
 
@@ -67,15 +67,6 @@ const Footer = () => {
               <Typography variant="body2">
                 <Link href="/about-us" sx={{ color: whiteText, display: 'block', marginBottom: '4px' }}>
                   About Us
-                </Link>
-                <Link href="/services" sx={{ color: whiteText, display: 'block', marginBottom: '4px' }}>
-                  Services
-                </Link>
-                <Link href="/team" sx={{ color: whiteText, display: 'block', marginBottom: '4px' }}>
-                  Team
-                </Link>
-                <Link href="/career" sx={{ color: whiteText, display: 'block' }}>
-                  Career
                 </Link>
                 <Link href="/contact" sx={{ color: whiteText, display: 'block', marginTop: '4px' }}>
                   Contact
