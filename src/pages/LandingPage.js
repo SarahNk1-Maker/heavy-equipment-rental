@@ -1,16 +1,10 @@
 import React from 'react';
 import {
-  Box,
-  Button,
   Container,
   Typography,
   Grid,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
 } from '@mui/material';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+
 
 import EquipmentWidget from '../../src/pages/equipmentwidget';
 import alphaImage from '../assets/services.jpg'; // Import your image here
